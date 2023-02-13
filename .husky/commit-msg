@@ -1,0 +1,32 @@
+#!/usr/bin/env sh
+
+# 获取当前提交的 commit msg
+commit_msg=`cat $1`
+
+msg_re="^(feat|fix|docs|style|refactor|perf|test|workflow|build|ci|chore|release)(\(.+\))?:.{1,100}"
+
+echo ""
+echo "commit message: $commit_msg"
+echo ""
+
+if [[ ! $commit_msg =~ $msg_re ]]
+then
+	echo "-----------------------------------------------------------------"
+	echo "不合法的 commit 消息提交格式，请使用正确的格式:"
+	echo ""
+	echo "    feat:	新功能、新特性"
+	echo "     fix:	修改 bug"
+	echo "    perf:	更改代码，以提高性能（在不影响代码内部行为的前提下，对程序性能进行优化）"
+	echo "refactor:	代码重构（重构，在不影响代码内部行为、功能下的代码修改）"
+	echo "    docs:	文档修改"
+	echo "   style:	代码格式修改, 注意不是 css 修改（例如分号修改）"
+	echo "    test:	测试用例新增、修改"
+	echo "   build:	影响项目构建或依赖项修改"
+	echo "  revert:	恢复上一次提交"
+	echo "      ci:	持续集成相关文件修改"
+	echo "   chore:	其他修改（不在上述类型中的修改）"
+	echo " release:	发布新版本"
+	echo "-----------------------------------------------------------------"
+	# 异常退出
+	exit 1
+fi
