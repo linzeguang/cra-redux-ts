@@ -11,7 +11,7 @@ import App from './App'
 
 const persistor = persistStore(store)
 
-const container = document.getElementById('root')!
+const container = document.getElementById('app')!
 const root = createRoot(container)
 
 root.render(

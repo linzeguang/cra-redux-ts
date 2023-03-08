@@ -41,6 +41,7 @@
   },
   "plugins": ["react", "@typescript-eslint", "simple-import-sort"],
   "rules": {
+    "@typescript-eslint/no-non-null-assertion": "off",
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "react/self-closing-comp": ["error"]

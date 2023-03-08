@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path')
 const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const { getPlugin, pluginByName, whenProd } = require('@craco/craco')
+const PrerendererWebpackPlugin = require('@prerenderer/webpack-plugin')
 
 const pathResolve = (pathUrl) => path.join(__dirname, pathUrl)
 const analyzer = process.argv.includes('--analyzer')
@@ -33,6 +35,14 @@ module.exports = {
                   // 移除debugger
                   drop_debugger: true,
                 },
+              },
+            }),
+            new PrerendererWebpackPlugin({
+              routes: ['/', '/about'],
+              rendererOptions: {
+                headless: false,
+                renderAfterTime: 3000,
+                timeout: 5000,
               },
             }),
           ],
