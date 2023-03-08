@@ -45,9 +45,13 @@
     "webpack-bundle-analyzer": "^4.7.0"
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx,js,jsx,css,scss}": [
+    "src/**/*.{ts,tsx,js,jsx}": [
       "prettier --write",
-      "eslint --cache --fix",
+      "eslint --fix",
+      "git add"
+    ],
+    "src/**/*.{css,scss,less}": [
+      "prettier --write",
       "git add"
     ]
   },

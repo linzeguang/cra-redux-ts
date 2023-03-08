@@ -8,8 +8,8 @@ const Routing: React.FC = () => {
   return (
     <React.Suspense fallback={null}>
       <Routes>
-        <Route path='*' element={<Home />} />
-        <Route path='about' element={<About />} />
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
       </Routes>
     </React.Suspense>
   )
