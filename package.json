@@ -1,6 +1,6 @@
 {
   "name": "cra-redux-ts",
-  "version": "0.0.0",
+  "version": "0.0.1-0",
   "private": true,
   "scripts": {
     "start": "craco start",
@@ -12,13 +12,13 @@
     "lint:fix": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier \"src/**/*.{js,jsx,ts,tsx,css,scss,less}\" --write",
     "prepare": "husky install",
-    "version-tag:major": "npm version major -m \"UPGRADE to v%s\"",
-    "version-tag:minor": "npm version minor -m \"UPGRADE to v%s\"",
-    "version-tag:patch": "npm version patch -m \"UPGRADE to v%s\"",
-    "version-tag:premajor": "npm version premajor -m \"UPGRADE to v%s\"",
-    "version-tag:preminor": "npm version preminor -m \"UPGRADE to v%s\"",
-    "version-tag:prepatch": "npm version prepatch -m \"UPGRADE to v%s\"",
-    "version-tag:prerelease": "npm version prerelease -m \"UPGRADE to v%s\""
+    "version-tag:major": "npm version major -m \"release: upgrade to v%s\"",
+    "version-tag:minor": "npm version minor -m \"release: upgrade to v%s\"",
+    "version-tag:patch": "npm version patch -m \"release: upgrade to v%s\"",
+    "version-tag:premajor": "npm version premajor -m \"release: upgrade to v%s\"",
+    "version-tag:preminor": "npm version preminor -m \"release: upgrade to v%s\"",
+    "version-tag:prepatch": "npm version prepatch -m \"release: upgrade to v%s\"",
+    "version-tag:prerelease": "npm version prerelease -m \"release: upgrade to v%s\""
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
