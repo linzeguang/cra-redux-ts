@@ -3,7 +3,7 @@
 # 获取当前提交的 commit msg
 commit_msg=`cat $1`
 
-msg_re="^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|release)(\(.+\))?:.{1,100}"
+msg_re="^(feat|fix|perf|refactor|docs|style|test|build|revert|ci|chore|release)(\(.+\))?:.{1,100}"
 
 echo ""
 echo "commit message: $commit_msg"

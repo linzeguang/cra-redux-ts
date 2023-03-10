@@ -84,19 +84,51 @@
     "types": [
       {
         "type": "feat",
-        "section": "新特性"
+        "section": "新功能、新特性"
       },
       {
         "type": "fix",
-        "section": "Bug修复"
+        "section": "修改 bug"
+      },
+      {
+        "type": "perf",
+        "section": "更改代码，以提高性能（在不影响代码内部行为的前提下，对程序性能进行优化）"
+      },
+      {
+        "type": "refactor",
+        "section": "代码重构（重构，在不影响代码内部行为、功能下的代码修改）"
       },
       {
         "type": "docs",
-        "section": "文档"
+        "section": "文档修改"
+      },
+      {
+        "type": "style",
+        "section": "代码格式修改, 注意不是 css 修改（例如分号修改）"
+      },
+      {
+        "type": "test",
+        "section": "测试用例新增、修改"
+      },
+      {
+        "type": "build",
+        "section": "影响项目构建或依赖项修改"
+      },
+      {
+        "type": "revert",
+        "section": "恢复上一次提交"
+      },
+      {
+        "type": "ci",
+        "section": "持续集成相关文件修改"
       },
       {
         "type": "chore",
-        "section": "其他修改"
+        "section": "其他修改（不在上述类型中的修改）"
+      },
+      {
+        "type": "release",
+        "section": "发布新版本"
       }
     ]
   }
