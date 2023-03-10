@@ -93,6 +93,10 @@
       {
         "type": "docs",
         "section": "文档"
+      },
+      {
+        "type": "chore",
+        "section": "其他修改"
       }
     ]
   }
