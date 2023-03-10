@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 const Text = styled.p({
-  fontSize: 32,
+  fontSize: 24,
   color: 'tomato',
 })
 
