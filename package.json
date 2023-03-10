@@ -14,13 +14,13 @@
     "prepare": "husky install",
     "release": "standard-version",
     "postrelease": "git push && git push --tags --no-verify",
-    "version-tag:major": "npm version major -m \"release: upgrade to v%s\"",
-    "version-tag:minor": "npm version minor -m \"release: upgrade to v%s\"",
-    "version-tag:patch": "npm version patch -m \"release: upgrade to v%s\"",
-    "version-tag:premajor": "npm version premajor -m \"release: upgrade to v%s\"",
-    "version-tag:preminor": "npm version preminor -m \"release: upgrade to v%s\"",
-    "version-tag:prepatch": "npm version prepatch -m \"release: upgrade to v%s\"",
-    "version-tag:prerelease": "npm version prerelease -m \"release: upgrade to v%s\""
+    "version-tag:major": "npm run release -- --release-as major",
+    "version-tag:minor": "npm run release -- --release-as minor",
+    "version-tag:patch": "npm run release -- --release-as patch",
+    "version-tag:premajor": "npm run version-tag:major -- --prerelease",
+    "version-tag:preminor": "npm run version-tag:minor -- --prerelease",
+    "version-tag:prepatch": "npm run version-tag:patch -- --prerelease",
+    "version-tag:prerelease": "npm run version-tag:release -- --prerelease"
   },
   "dependencies": {
     "@emotion/react": "^11.10.5",
