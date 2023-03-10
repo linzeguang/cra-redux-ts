@@ -60,12 +60,10 @@
   "lint-staged": {
     "src/**/*.{ts,tsx,js,jsx}": [
       "prettier --write",
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ],
     "src/**/*.{css,scss,less}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "browserslist": {
