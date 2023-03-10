@@ -1,25 +1,15 @@
-import React, { useState } from 'react'
-import { Button } from '@mui/material'
+import React from 'react'
+import styled from '@emotion/styled'
 
-import { useAppDispatch, useAppSelector } from '@/app/hooks'
-import { selectTheme, updateTheme } from '@/features/basicSlice'
+const Text = styled.p({
+  fontSize: 32,
+  color: 'tomato',
+})
 
 const Home: React.FC = () => {
-  const theme = useAppSelector(selectTheme)
-  const dispatch = useAppDispatch()
-  const [data, setData] = useState({ a: { b: { c: 1 } } })
-
   return (
     <div>
-      <div>{theme}</div>
-      <Button variant='contained' onClick={() => dispatch(updateTheme('dark'))}>
-        dark
-      </Button>
-      <Button variant='outlined' onClick={() => dispatch(updateTheme('light'))}>
-        light
-      </Button>
-      <div>{data.a.b.c}</div>
-      <Button onClick={() => setData({ a: { b: { c: 2 } } })}>change</Button>
+      <Text>Home</Text>
     </div>
   )
 }
