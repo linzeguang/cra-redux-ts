@@ -79,5 +79,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "standard-version": {
+    "types": [
+      {
+        "type": "feat",
+        "section": "新特性"
+      },
+      {
+        "type": "fix",
+        "section": "Bug修复"
+      },
+      {
+        "type": "docs",
+        "section": "文档"
+      }
+    ]
   }
 }
